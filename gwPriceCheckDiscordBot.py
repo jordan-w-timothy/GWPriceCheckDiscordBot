@@ -149,7 +149,7 @@ async def on_message(message):
         print("Message Recieved \n" + message.content)
         inputMessage = str(message.content)
 
-        # print("The inputMessage is: ", inputMessage)
+        
 
         searchTerm = inputMessage.split("$")
         print(" SearchTerm is  " + searchTerm[1])
@@ -161,15 +161,15 @@ async def on_message(message):
         print("Message Recieved \n" + message.content)
         inputMessage = str(message.content)
 
-        # print("The inputMessage is: ", inputMessage)
+        
 
         searchTerm = inputMessage.split("$")
         print(" SearchTerm is  " + searchTerm[1])
-        # print(" SearchTerm is  " + searchTerm[1])
+        
         
         pokemon = getAscalonTrade(searchTerm[1])
         await message.channel.send(pokemon)
 
     
 
-client.run("ODk1MTU1NzE1MzQwMTIwMDc0.YV0cuQ.RiN59NXX_KNwZLG-iDDdC7rKLUg")
+client.run(os.getenv('TOKEN'))
